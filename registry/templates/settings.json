@@ -1,0 +1,36 @@
+{
+  "tokenOptimization": {
+    "lazyLoadSkills": true,
+    "maxContextSize": 100000,
+    "compactAfterTurns": 10
+  },
+  "mcp": {
+    "autoLoad": false,
+    "requireExplicitCall": true,
+    "allowList": {{ mcp | tojson }}
+  },
+  "agents": {
+    "defaultModel": "sonnet",
+    "heavyTaskModel": "opus",
+    "maxConcurrentAgents": 2
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash(git commit:*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Commit hook triggered'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "project": {
+    "name": "{{ name }}",
+    "language": "{{ stack.language }}",
+    "type": "{{ type }}"
+  }
+}
