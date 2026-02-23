@@ -1,0 +1,31 @@
+[package]
+name = "kael"
+version = "0.1.0"
+edition = "2021"
+authors = ["Pablo <pablo@pablolab.dev>"]
+description = "Claude Code configuration framework CLI"
+license = "MIT"
+repository = "https://github.com/pabloism0x/kael"
+homepage = "https://github.com/pabloism0x/kael"
+keywords = ["claude", "claude-code", "cli", "scaffold", "ai"]
+categories = ["command-line-utilities", "development-tools"]
+rust-version = "1.75"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_yaml_ng = "0.9"
+serde_json = "1"
+minijinja = { version = "2", features = ["json"] }
+pulldown-cmark = "0.13"
+console = "0.16"
+indicatif = "0.17"
+include_dir = "0.7"
+thiserror = "2"
+dialoguer = "0.12"
+
+[dev-dependencies]
+assert_cmd = "2"
+assert_fs = "1"
+predicates = "3"
+tempfile = "3"
