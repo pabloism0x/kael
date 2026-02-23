@@ -14,5 +14,5 @@ Cargo.lock
 Thumbs.db
 
 # Project-specific (should not be in repo)
-CLAUDE.md
-PRD.md
+/CLAUDE.md
+/PRD.md
